@@ -1,0 +1,2 @@
+ASM=dasm
+BIN=bin

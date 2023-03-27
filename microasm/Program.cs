@@ -19,7 +19,7 @@
 
             if (args.Length != 6)
             {
-                Console.WriteLine("Usage: microasm <flags-bytes> <ucode-addr-bytes> <ucode-rom-word-size-bytes> <ucode-rom-addr-width-bytes> <source-directory> <output-directory>");
+                Console.WriteLine("Usage: microasm <ctrl-lines-bytes> <ucode-addr-bytes> <ucode-rom-word-size-bytes> <ucode-rom-addr-width-bytes> <source-directory> <output-directory>");
                 return;
             }
 

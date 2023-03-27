@@ -1,0 +1,338 @@
+E:\Development\diy-cpu-uc-assembler\microasm\MicroOps.cs(31,61): warning CS8601: Possible null reference assignment. [E:\Development\diy-cpu-uc-assembler\microasm\microasm.csproj]
+E:\Development\diy-cpu-uc-assembler\microasm\Program.cs(123,30): warning CS0168: The variable 'e' is declared but never used [E:\Development\diy-cpu-uc-assembler\microasm\microasm.csproj]
+E:\Development\diy-cpu-uc-assembler\microasm\MicroCode.cs(124,57): warning CS8600: Converting null literal or possible null value to non-nullable type. [E:\Development\diy-cpu-uc-assembler\microasm\microasm.csproj]
+E:\Development\diy-cpu-uc-assembler\microasm\MicroOps.cs(72,37): warning CS8600: Converting null literal or possible null value to non-nullable type. [E:\Development\diy-cpu-uc-assembler\microasm\microasm.csproj]
+E:\Development\diy-cpu-uc-assembler\microasm\MicroCtrl.cs(113,57): warning CS8601: Possible null reference assignment. [E:\Development\diy-cpu-uc-assembler\microasm\microasm.csproj]
+MicroAsm
+--------
+
+uCode control lines: '4' bytes
+uCode address width: '1' bytes
+uCode ROMs data width: '1' bytes
+uCode ROMs address width: '1' bytes
+Input dir: 'E:\Development\diy-cpu-uc-assembler\ucode'
+Output dir: 'E:\Development\diy-cpu-uc-assembler\ucode\bin'
+
+mCode Decoder
+-------------
+
+4C	JMP
+61	ADC
+65	ADC
+69	ADC
+6D	ADC
+71	ADC
+75	ADC
+79	ADC
+7D	ADC
+8A	TXA
+A1	LDA
+A2	LDX
+A5	LDA
+A6	LDX
+A9	LDA
+AA	TAX
+AD	LDA
+AE	LDX
+B1	LDA
+B5	LDA
+B6	LDX
+B9	LDA
+BD	LDA
+BE	LDX
+CA	DEX
+D0	BNE
+E1	SBC
+E5	SBC
+E8	INX
+E9	SBC
+ED	SBC
+F0	BEQ
+F1	SBC
+F5	SBC
+F9	SBC
+FD	SBC
+
+mMode Decoder
+-------------
+
+00	IMP
+05	ZP
+06	ZP
+08	IMP
+09	IMM
+0A	ACC
+10	REL
+15	ZPIDXX
+16	ZPIDXX
+18	IMP
+20	IMP
+24	ZP
+25	ZP
+26	ZP
+28	IMP
+29	IMM
+2A	ACC
+30	REL
+35	ZPIDXX
+36	ZPIDXX
+38	IMP
+40	IMP
+45	ZP
+46	ZP
+48	IMP
+49	IMM
+4A	ACC
+4C	IMP
+50	REL
+55	ZPIDXX
+56	ZPIDXX
+58	IMP
+60	IMP
+65	ZP
+66	ZP
+68	IMP
+69	IMM
+6A	ACC
+6C	IMP
+70	REL
+75	ZPIDXX
+76	ZPIDXX
+78	IMP
+84	ZP
+85	ZP
+86	ZP
+88	IMP
+8A	IMP
+90	REL
+94	ZPIDXX
+95	ZPIDXX
+98	IMP
+9A	IMP
+A0	IMM
+A2	IMM
+A4	ZP
+A5	ZP
+A6	ZP
+A8	IMP
+A9	IMM
+AA	IMP
+B0	REL
+B4	ZPIDXX
+B5	ZPIDXX
+B8	IMP
+BA	IMP
+C0	IMM
+C4	ZP
+C5	ZP
+C6	ZP
+C8	IMP
+C9	IMM
+CA	IMP
+D0	REL
+D5	ZPIDXX
+D6	ZPIDXX
+D8	IMP
+E0	IMM
+E4	ZP
+E5	ZP
+E6	ZP
+E8	IMP
+E9	IMM
+EA	IMP
+F0	REL
+F5	ZPIDXX
+F6	ZPIDXX
+F8	IMP
+
+uControl Symbol Table
+---------------------
+
+A/LD/CDATA                               ........ ........ 1....... ........ ........ 	00 00 80 00 00
+A/OUT/CDATA                              ........ .......1 ........ ........ ........ 	00 01 00 00 00
+ALUA/LD/CDATA                            ........ ...1.... ........ ........ ........ 	00 10 00 00 00
+ALUB/LD/CDATA                            ........ ..1..... ........ ........ ........ 	00 20 00 00 00
+ALUOP/0                                  ........ 1....... ........ ........ ........ 	00 80 00 00 00
+ALUOP/1                                  .......1 ........ ........ ........ ........ 	01 00 00 00 00
+ALUR/OUT/CDATA                           ........ .1...... ........ ........ ........ 	00 40 00 00 00
+CDATA/LD/0                               ........ ........ ........ .......1 ........ 	00 00 00 01 00
+CDATA/TO/CADDR                           ........ ........ ........ ......1. ........ 	00 00 00 02 00
+IR/LD/XDATA                              ........ ........ ........ ...1.... ........ 	00 00 00 10 00
+MAR/LD/CADDR                             ........ ........ ......1. ........ ........ 	00 00 02 00 00
+MBR/LD/CDATA                             ........ ........ ........ 1....... ........ 	00 00 00 80 00
+MBR/LD/XDATA                             ........ ........ ........ ..1..... ........ 	00 00 00 20 00
+MBR/OUT/CDATA                            ........ ........ .......1 ........ ........ 	00 00 01 00 00
+MBR/OUT/XDATA                            ........ ........ ........ .1...... ........ 	00 00 00 40 00
+MEM/LD/XDATA                             ........ ........ ........ .....1.. ........ 	00 00 00 04 00
+MEM/OUT/XDATA                            ........ ........ ........ ....1... ........ 	00 00 00 08 00
+PC/INC                                   ........ ........ .....1.. ........ ........ 	00 00 04 00 00
+PC/LD/CDATA                              ........ ........ ...1.... ........ ........ 	00 00 10 00 00
+PC/OUT/CADDR                             ........ ........ .1...... ........ ........ 	00 00 40 00 00
+PC/OUT/CDATA                             ........ ........ ..1..... ........ ........ 	00 00 20 00 00
+PC/REL/CDATA                             ........ ........ ....1... ........ ........ 	00 00 08 00 00
+PZ/LD                                    ........ ....1... ........ ........ ........ 	00 08 00 00 00
+uJMP                                     .....1.. ........ ........ ........ ........ 	04 00 00 00 00
+uJMP/INV                                 ....1... ........ ........ ........ ........ 	08 00 00 00 00
+uP0                                      ...1.... ........ ........ ........ ........ 	10 00 00 00 00
+uP1                                      ..1..... ........ ........ ........ ........ 	20 00 00 00 00
+uP2                                      .1...... ........ ........ ........ ........ 	40 00 00 00 00
+uZJMP                                    1....... ........ ........ ........ ........ 	80 00 00 00 00
+X/LD/CDATA                               ........ ......1. ........ ........ ........ 	00 02 00 00 00
+X/OUT/CDATA                              ........ .....1.. ........ ........ ........ 	00 04 00 00 00
+Z/SRC/CDATA                              ......1. ........ ........ ........ ........ 	02 00 00 00 00
+ZERO                                     ........ ........ ........ ........ ........ 	00 00 00 00 00
+
+
+uOps Symbol Table
+-----------------
+
+A<-MBR                                   ........ ........ 1......1 ........ ........ 	00 00 81 00 00
+ALUA<-A                                  ........ ...1...1 ........ ........ ........ 	00 11 00 00 00
+ALUA<-MBR                                ........ ...1.... .......1 ........ ........ 	00 10 01 00 00
+ALUA<-X                                  ........ ...1.1.. ........ ........ ........ 	00 14 00 00 00
+ALUB<-MBR                                ........ ..1..... .......1 ........ ........ 	00 20 01 00 00
+ALUB<-X                                  ........ ..1..1.. ........ ........ ........ 	00 24 00 00 00
+ALUOP-ADD                                ........ ........ ........ ........ ........ 	00 00 00 00 00
+ALUOP-DEC                                .......1 1....... ........ ........ ........ 	01 80 00 00 00
+ALUOP-INC                                .......1 ........ ........ ........ ........ 	01 00 00 00 00
+ALUOP-SUB                                ........ 1....... ........ ........ ........ 	00 80 00 00 00
+IR<-MEM                                  ........ ........ ........ ...11... ........ 	00 00 00 18 00
+MAR<-ALU                                 ........ .1...... ......1. ......1. ........ 	00 40 02 02 00
+MAR<-MBR                                 ........ ........ ......11 ......1. ........ 	00 00 03 02 00
+MAR<-PC                                  ........ ........ .1....1. ........ ........ 	00 00 42 00 00
+MBR<-A                                   ........ .......1 ........ 1....... ........ 	00 01 00 80 00
+MBR<-MEM                                 ........ ........ ........ ..1.1... ........ 	00 00 00 28 00
+MBR<-X                                   ........ .....1.. ........ 1....... ........ 	00 04 00 80 00
+MEM<-MBR                                 ........ ........ ........ .1...1.. ........ 	00 00 00 44 00
+PC-INC                                   ........ ........ .....1.. ........ ........ 	00 00 04 00 00
+PC<-MBR                                  ........ ........ ...1...1 ........ ........ 	00 00 11 00 00
+X<-ALU                                   ........ .1....1. ........ ........ ........ 	00 42 00 00 00
+X<-MBR                                   ........ ......1. .......1 ........ ........ 	00 02 01 00 00
+Z/SRC/ALU                                ........ ........ ........ ........ ........ 	00 00 00 00 00
+
+
+uLabel Symbol Table
+-------------------
+
+BEQ_BNE                                  ........ ........ ........ ........ ..1....1 	00 00 00 00 21
+BEQ_TRUE                                 ........ ........ ........ ........ ...111.1 	00 00 00 00 1D
+p0                                       ........ ........ ........ ........ ......1. 	00 00 00 00 02
+RESET                                    ........ ........ ........ ........ ........ 	00 00 00 00 00
+
+
+uRom
+----
+
+Size: 47 words
+uOps used: 19
+
+
+.label RESET                            
+0000    CDATA/LD/0 | CDATA/TO/CADDR | MBR/LD/CDATA | MAR/LD/CADDR | A/LD/CDATA | X/LD/CDATA | ALUA/LD/CDATA | ALUB/LD/CDATA | PC/LD/CDATA
+                                      ........ ..11..1. 1..1..1. 1.....11 ........ 	00 32 92 83 00
+0001    uP0                           ...1.... ........ ........ ........ ........ 	10 00 00 00 00
+
+.label p0                               
+0002    MAR<-PC                       ........ ........ .1....1. ........ ........ 	00 00 42 00 00
+0003    PC-INC                        ........ ........ .....1.. ........ ........ 	00 00 04 00 00
+0004    IR<-MEM                       ........ ........ ........ ...11... ........ 	00 00 00 18 00
+0005    uP1                           ..1..... ........ ........ ........ ........ 	20 00 00 00 00
+
+.mode ACC
+0006    uP2                           .1...... ........ ........ ........ ........ 	40 00 00 00 00
+
+.mode IMM
+0007    MAR<-PC | PC-INC | uP2        .1...... ........ .1...11. ........ ........ 	40 00 46 00 00
+
+.mode IMP
+0008    uP2                           .1...... ........ ........ ........ ........ 	40 00 00 00 00
+
+.mode REL
+0009    MAR<-PC | PC-INC | uP2        .1...... ........ .1...11. ........ ........ 	40 00 46 00 00
+
+.mode ZP
+000A    MAR<-PC                       ........ ........ .1....1. ........ ........ 	00 00 42 00 00
+000B    MBR<-MEM | PC-INC             ........ ........ .....1.. ..1.1... ........ 	00 00 04 28 00
+000C    MAR<-MBR | uP2                .1...... ........ ......11 ......1. ........ 	40 00 03 02 00
+
+.mode ZPIDXX
+000D    MAR<-PC                       ........ ........ .1....1. ........ ........ 	00 00 42 00 00
+000E    MBR<-MEM | PC-INC             ........ ........ .....1.. ..1.1... ........ 	00 00 04 28 00
+000F    ALUA<-MBR                     ........ ...1.... .......1 ........ ........ 	00 10 01 00 00
+0010    ALUB<-X                       ........ ..1..1.. ........ ........ ........ 	00 24 00 00 00
+0011    ALUOP-ADD | MAR<-ALU | uP2    .1...... .1...... ......1. ......1. ........ 	40 40 02 02 00
+
+.opcode ADC
+0012    MBR<-MEM                      ........ ........ ........ ..1.1... ........ 	00 00 00 28 00
+0013    ALUB<-MBR                     ........ ..1..... .......1 ........ ........ 	00 20 01 00 00
+0014    ALUA<-A                       ........ ...1...1 ........ ........ ........ 	00 11 00 00 00
+0015    ALUOP-ADD | ALUR/OUT/CDATA | A/LD/CDATA | PZ/LD | Z/SRC/CDATA | uP0
+                                      ...1..1. .1..1... 1....... ........ ........ 	12 48 80 00 00
+
+.opcode SBC
+0016    MBR<-MEM                      ........ ........ ........ ..1.1... ........ 	00 00 00 28 00
+0017    ALUB<-MBR                     ........ ..1..... .......1 ........ ........ 	00 20 01 00 00
+0018    ALUA<-A                       ........ ...1...1 ........ ........ ........ 	00 11 00 00 00
+0019    ALUOP-SUB | ALUR/OUT/CDATA | A/LD/CDATA | PZ/LD | Z/SRC/CDATA | uP0
+                                      ...1..1. 11..1... 1....... ........ ........ 	12 C8 80 00 00
+
+.opcode BEQ
+001A    MBR<-MEM                      ........ ........ ........ ..1.1... ........ 	00 00 00 28 00
+001B    uZJMP BEQ_TRUE                1....... ........ ........ ........ ...111.1 	80 00 00 00 1D
+001C    uP0                           ...1.... ........ ........ ........ ........ 	10 00 00 00 00
+
+.label BEQ_TRUE                         
+001D    MBR/OUT/CDATA | PC/REL/CDATA | uP0
+                                      ...1.... ........ ....1..1 ........ ........ 	10 00 09 00 00
+
+.opcode BNE
+001E    MBR<-MEM                      ........ ........ ........ ..1.1... ........ 	00 00 00 28 00
+001F    uJMP/INV | uZJMP BEQ_BNE      1...1... ........ ........ ........ ..1....1 	88 00 00 00 21
+0020    uP0                           ...1.... ........ ........ ........ ........ 	10 00 00 00 00
+
+.label BEQ_BNE                          
+0021    MBR/OUT/CDATA | PC/REL/CDATA | uP0
+                                      ...1.... ........ ....1..1 ........ ........ 	10 00 09 00 00
+
+.opcode INX
+0022    ALUA<-X                       ........ ...1.1.. ........ ........ ........ 	00 14 00 00 00
+0023    ALUOP-INC | X<-ALU | PZ/LD | Z/SRC/CDATA | uP0
+                                      ...1..11 .1..1.1. ........ ........ ........ 	13 4A 00 00 00
+
+.opcode DEX
+0024    ALUA<-X                       ........ ...1.1.. ........ ........ ........ 	00 14 00 00 00
+0025    ALUOP-DEC | X<-ALU | PZ/LD | Z/SRC/CDATA | uP0
+                                      ...1..11 11..1.1. ........ ........ ........ 	13 CA 00 00 00
+
+.opcode JMP
+0026    MAR<-PC                       ........ ........ .1....1. ........ ........ 	00 00 42 00 00
+0027    MBR<-MEM | PC-INC             ........ ........ .....1.. ..1.1... ........ 	00 00 04 28 00
+0028    PC<-MBR | uP0                 ...1.... ........ ...1...1 ........ ........ 	10 00 11 00 00
+
+.opcode LDA
+0029    MBR<-MEM                      ........ ........ ........ ..1.1... ........ 	00 00 00 28 00
+002A    A<-MBR | PZ/LD | Z/SRC/CDATA | uP0
+                                      ...1..1. ....1... 1......1 ........ ........ 	12 08 81 00 00
+
+.opcode LDX
+002B    MBR<-MEM                      ........ ........ ........ ..1.1... ........ 	00 00 00 28 00
+002C    X<-MBR |  PZ/LD | Z/SRC/CDATA | uP0
+                                      ...1..1. ....1.1. .......1 ........ ........ 	12 0A 01 00 00
+
+.opcode TAX
+002D    A/OUT/CDATA | X/LD/CDATA | PZ/LD | Z/SRC/CDATA | uP0
+                                      ...1..1. ....1.11 ........ ........ ........ 	12 0B 00 00 00
+
+.opcode TXA
+002E    X/OUT/CDATA | A/LD/CDATA | PZ/LD | Z/SRC/CDATA | uP0
+                                      ...1..1. ....11.. 1....... ........ ........ 	12 0C 80 00 00
+
+
+Validating all mCodes implemented have at least one mMode decoding defined
+Validating all mCodes implemented have at least one mCode decoding defined
+
+Writing 'mOpDecoder.bin'...done
+Writing 'mModeDecoder.bin'...done
+Writing 'uROM' files...done
+
+All done.

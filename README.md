@@ -1,10 +1,10 @@
 # DIY CPU Microcode Assembler
 
-μcode assembler for the [DIY CPU](https://github.com/skagra/diy-cpu-meta).
+A μcode assembler for the [DIY CPU](https://github.com/skagra/diy-cpu-meta).
 
 The assembler processes symbolic μcode definitions to create the following binary ROM files:
 
-* `mModeDecoder.bin` - Addressing mode decoding.  A mapping from machine-code opcodes to the address of the μcode that implements the appropriate addressing mode.
+* `mModeDecoder.bin` - Addressing mode decoding.  A mapping from machine-code opcodes to the address of the μcode that implements the associated addressing mode.
 * `mOpDecoder.bin` - Instruction execution decoding.  A mapping from machine-code opcodes to the address of the μcode that implements the operation.
 * `uROM-*.bin` - Binary ROM files containing the actual μcode, sliced based on the ROM word width.
 
@@ -14,7 +14,7 @@ The μcode assembler takes the following files as input:
 
 ## mModeDecoder.txt
 
-Each line in the `mModeDecoder.txt` associates a symbolic name for an addressing mode with a set of numerical machine-code opcodes.  The symbolic name is used to identify the relevant μcode in `uCode.txt`. 
+Each line in `mModeDecoder.txt` associates a symbolic name for an addressing mode with a set of numerical machine-code opcodes.  The symbolic name is used to identify the relevant μcode in `uCode.txt`. 
 
 For [example](ucode/mModeDecoder.txt):
 
@@ -26,7 +26,7 @@ IMM         69 29 C9 E0 C0 49 A9 A2 A0 09 E9
 
 ## mOpDecoder.txt
 
-Each line in the `mOpDecoder.txt` associates a symbolic name for a machine-code opcode with a set of numerical machine-code opcodes.  The symbolic name is used to identify the relevant μcode in `uCode.txt`. 
+Each line in `mOpDecoder.txt` associates a symbolic name for a machine-code opcode with a set of numerical machine-code opcodes.  The symbolic name is used to identify the relevant μcode in `uCode.txt`. 
 
 For [example](ucode/mOpDecoder.txt):
 
@@ -52,7 +52,7 @@ MEM/OUT/XDATA   ........ ........ ........ ....1...
 
 ## uOps.txt
 
-Each line in `uOps.txt` associates a symbolic name with a logical `OR` of symbols from `uCtrl.txt` - that is of control lines.  This is a convenience mechanism used for abstraction and to reduce repetition when defining μcode in `uCode.txt`.     
+Each line in `uOps.txt` associates a symbolic name with a binary *or* (`|`) of symbols from `uCtrl.txt` - that is of control lines.  This is a convenience mechanism used for abstraction and to reduce repetition when defining μcode in `uCode.txt`.     
 
 For [example](ucode/uOps.txt):
 
@@ -64,7 +64,7 @@ PC-INC          PC/INC
 
 ## uCode.txt
 
-`uCode.txt` contains the actual μcode and makes use of the symbols defined in `mModeDecoder.txt`, `mOpDecoder.txt`, `uOps.txt` and `uCtrl.txt`.
+`uCode.txt` contains the actual μcode defined in terms of symbols from in `mModeDecoder.txt`, `mOpDecoder.txt`, `uOps.txt` and `uCtrl.txt`.
 
 Each line in `uCode.txt` is either:
 
